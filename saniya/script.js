@@ -24,7 +24,6 @@
     menuToggle.setAttribute('aria-expanded', 'false');
   }));
 
-  // Pupils track the pointer on desktop; touch devices get a soft idle drift.
   const eyesCard = document.getElementById('eyesCard');
   const pupils = [...document.querySelectorAll('.pupil')];
   const eyesFace = document.querySelector('.eyes-face');
