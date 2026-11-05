@@ -1240,13 +1240,13 @@ eyes-card {
     color:var(--accent)
 }
 .reveal {
-    opacity:0;
-    transform:translateY(22px);
-    transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1)
+    opacity: 1;
+    transform: none;
+    transition: opacity .7s ease, transform .7s ease;
 }
 .reveal.visible {
-    opacity:1;
-    transform:translateY(0)
+    opacity: 1;
+    transform: none;
 }
 @media(max-width:900px) {
     .desktop-nav {
