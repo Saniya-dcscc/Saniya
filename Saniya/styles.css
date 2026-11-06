@@ -33,7 +33,7 @@ body {
     transition:background .3s,color .3s
 }
 body.dark {
-    --bg:#5C5CFF;
+    --bg:#181818;
     --surface:#D8D0B9;
     --surface-2:#D8D0B9;
     --ink:#f4f0e7;
