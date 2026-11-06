@@ -34,7 +34,7 @@ body {
 }
 body.dark {
     --bg:#181818;
-    --surface:#181818;
+    --surface:#0000FF;
     --surface-2:#919191;
     --ink:#f4f0e7;
     --muted:#b7b9ae;
