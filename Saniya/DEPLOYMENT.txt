@@ -1,0 +1,19 @@
+STATIC DEPLOYMENT
+
+This is a plain HTML/CSS/JavaScript site. No Vercel framework preset or build command is required.
+
+Vercel:
+- Import the folder/repository.
+- Framework Preset: Other.
+- Build Command: leave blank.
+- Output Directory: leave blank (or use ./ if the UI requires a value).
+- Deploy.
+
+Netlify:
+- Deploy the folder as a static site, or connect its Git repository.
+- Build command: leave blank.
+- Publish directory: .
+
+GitHub Pages:
+- Upload the files to the repository root.
+- Enable Pages from the main branch and root folder.
