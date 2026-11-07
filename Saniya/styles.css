@@ -83,7 +83,7 @@ button {
     border-bottom:1px solid color-mix(in srgb,var(--line) 70%,transparent)
 }
 .brand {
-    font-family:Manrope,sans-serif;
+    font-family:fantasy,sans-serif;
     font-size:27px;
     font-weight:800;
     letter-spacing:-2px
