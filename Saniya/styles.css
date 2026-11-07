@@ -165,9 +165,9 @@ button {
     display:none
 }
 .hero {
-    min-height:calc(100svh - 82px);
-    padding-top:90px;
-    padding-bottom:95px;
+    min-height:auto;
+    padding-top:30px;
+    padding-bottom:60px;
     display:grid;
     grid-template-columns:1.08fr .92fr;
     align-items:center;
