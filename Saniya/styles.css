@@ -462,7 +462,7 @@ h1 {
     max-width:590px
 }
 .large-copy {
-    font:600 22px/1.55 Manrope,sans-serif;
+    font:600 22px/1.55 fantasy,sans-serif;
     letter-spacing:-.03em
 }
 .about-content>p:not(.large-copy) {
