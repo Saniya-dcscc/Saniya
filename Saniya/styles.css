@@ -83,7 +83,7 @@ button {
     border-bottom:1px solid color-mix(in srgb,var(--line) 70%,transparent)
 }
 .brand {
-    font-family:fantasy,sans-serif;
+    font-family:comic sans,sans-serif;
     font-size:27px;
     font-weight:800;
     letter-spacing:-2px
@@ -194,7 +194,7 @@ h1,h2,h3,p {
     margin-top:0
 }
 h1,h2,h3 {
-    font-family:fantasy,sans-serif
+    font-family:comic sans,sans-serif
 }
 h1 {
     font-size:clamp(56px,7.2vw,94px);
@@ -397,7 +397,7 @@ h1 {
     place-content:center;
     text-align:center;
     color:var(--accent);
-    font:800 11px/1.25 fantasy;
+    font:800 11px/1.25 comic sans;
     transform:rotate(12deg);
     z-index:4
 }
@@ -462,7 +462,7 @@ h1 {
     max-width:590px
 }
 .large-copy {
-    font:600 22px/1.55 fantasy,sans-serif;
+    font:600 22px/1.55 comic sans,sans-serif;
     letter-spacing:-.03em
 }
 .about-content>p:not(.large-copy) {
@@ -481,7 +481,7 @@ h1 {
     display:block
 }
 .about-facts strong {
-    font:800 25px fantasy;
+    font:800 25px comic sans;
     color:var(--accent)
 }
 .about-facts span {
@@ -725,7 +725,7 @@ h1 {
     color:#292b27
 }
 .chrom-word {
-    font:800 clamp(50px,7vw,100px)/1 fantasy;
+    font:800 clamp(50px,7vw,100px)/1 comic sans;
     letter-spacing:-.09em
 }
 .chrom-word span {
@@ -765,7 +765,7 @@ h1 {
     color:#2d3b31
 }
 .vote-mark {
-    font:800 68px fantasy;
+    font:800 68px comic sans;
     letter-spacing:-.08em
 }
 .vote-mark span {
@@ -803,7 +803,7 @@ h1 {
     transform:rotate(-4deg)
 }
 .news-paper b {
-    font:800 10px fantasy;
+    font:800 10px comic sans;
     display:block;
     border-bottom:1px solid #bbb4a8;
     padding-bottom:7px
@@ -823,7 +823,7 @@ h1 {
 }
 .news-paper strong {
     display:block;
-    font:800 24px/.9 fantasy;
+    font:800 24px/.9 comic sans;
     letter-spacing:-.05em;
     margin-top:10px;
     color:#b76548
@@ -848,7 +848,7 @@ h1 {
 }
 .quiz-window b {
     display:block;
-    font:800 20px/1.1 fantasy;
+    font:800 20px/1.1 comic sans;
     margin:12px 0
 }
 .quiz-options {
@@ -919,7 +919,7 @@ h1 {
     display:grid;
     place-content:center;
     text-align:center;
-    font:700 10px/1.2 fantasy
+    font:700 10px/1.2 comic sans
 }
 .blog-visual {
     background:#e9e3d7;
@@ -935,7 +935,7 @@ h1 {
 }
 .blog-sheet b {
     display:block;
-    font:800 25px/1 fantasy;
+    font:800 25px/1 comic sans;
     letter-spacing:-.06em;
     margin:12px 0
 }
@@ -954,13 +954,13 @@ h1 {
     color:#4a443b
 }
 .automation-loop {
-    font:800 100px/1 fantasy;
+    font:800 100px/1 comic sans;
     color:#a9684e;
     text-align:center
 }
 .automation-loop small {
     display:block;
-    font:700 9px/1.5 fantasy;
+    font:700 9px/1.5 comic sans;
     letter-spacing:.16em;
     color:#4a443b
 }
@@ -1143,7 +1143,7 @@ h1 {
     margin-bottom:9px
 }
 .contact-block>a,.profile-links a {
-    font:600 16px fantasy;
+    font:600 16px comic sans;
     color:#f7f4ed
 }
 .profile-links {
