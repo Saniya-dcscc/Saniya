@@ -481,7 +481,7 @@ h1 {
     display:block
 }
 .about-facts strong {
-    font:800 25px Manrope;
+    font:800 25px fantasy;
     color:var(--accent)
 }
 .about-facts span {
@@ -725,7 +725,7 @@ h1 {
     color:#292b27
 }
 .chrom-word {
-    font:800 clamp(50px,7vw,100px)/1 Manrope;
+    font:800 clamp(50px,7vw,100px)/1 fantasy;
     letter-spacing:-.09em
 }
 .chrom-word span {
@@ -765,7 +765,7 @@ h1 {
     color:#2d3b31
 }
 .vote-mark {
-    font:800 68px Manrope;
+    font:800 68px fantasy;
     letter-spacing:-.08em
 }
 .vote-mark span {
@@ -803,7 +803,7 @@ h1 {
     transform:rotate(-4deg)
 }
 .news-paper b {
-    font:800 10px Manrope;
+    font:800 10px fantasy;
     display:block;
     border-bottom:1px solid #bbb4a8;
     padding-bottom:7px
@@ -823,7 +823,7 @@ h1 {
 }
 .news-paper strong {
     display:block;
-    font:800 24px/.9 Manrope;
+    font:800 24px/.9 fantasy;
     letter-spacing:-.05em;
     margin-top:10px;
     color:#b76548
@@ -848,7 +848,7 @@ h1 {
 }
 .quiz-window b {
     display:block;
-    font:800 20px/1.1 Manrope;
+    font:800 20px/1.1 fantasy;
     margin:12px 0
 }
 .quiz-options {
@@ -919,7 +919,7 @@ h1 {
     display:grid;
     place-content:center;
     text-align:center;
-    font:700 10px/1.2 Manrope
+    font:700 10px/1.2 fantasy
 }
 .blog-visual {
     background:#e9e3d7;
@@ -935,7 +935,7 @@ h1 {
 }
 .blog-sheet b {
     display:block;
-    font:800 25px/1 Manrope;
+    font:800 25px/1 fantasy;
     letter-spacing:-.06em;
     margin:12px 0
 }
@@ -954,13 +954,13 @@ h1 {
     color:#4a443b
 }
 .automation-loop {
-    font:800 100px/1 Manrope;
+    font:800 100px/1 fantasy;
     color:#a9684e;
     text-align:center
 }
 .automation-loop small {
     display:block;
-    font:700 9px/1.5 Manrope;
+    font:700 9px/1.5 fantasy;
     letter-spacing:.16em;
     color:#4a443b
 }
@@ -1143,7 +1143,7 @@ h1 {
     margin-bottom:9px
 }
 .contact-block>a,.profile-links a {
-    font:600 16px Manrope;
+    font:600 16px fantasy;
     color:#f7f4ed
 }
 .profile-links {
