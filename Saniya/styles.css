@@ -397,7 +397,7 @@ h1 {
     place-content:center;
     text-align:center;
     color:var(--accent);
-    font:800 11px/1.25 Manrope;
+    font:800 11px/1.25 fantasy;
     transform:rotate(12deg);
     z-index:4
 }
