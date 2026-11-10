@@ -8,9 +8,9 @@
     --accent:#730219;
     --accent-soft:#FF8A9D;
     --white:#FFFFFF;
-    --dark:#FFFFFF;
-    --dark-2:#30362f;
-    --dark-text:#f7f4ed;
+    --white:#FFFFFF;
+    --white-2:#FFFFFF;
+    --white-text:#FFFFFF;
     --shadow:0 18px 55px rgba(40,38,30,.08);
     --radius:22px;
     color-scheme:light
@@ -32,7 +32,7 @@ body {
     -webkit-font-smoothing:antialiased;
     transition:background .3s,color .3s
 }
-body.dark {
+body.white {
     --bg:#181818;
     --surface:#0000FF;
     --surface-2:#919191;
@@ -43,7 +43,7 @@ body.dark {
     --accent-soft:#49372f;
     --white:#9db294;
     --shadow:0 18px 55px rgba(0,0,0,.2);
-    color-scheme:dark
+    color-scheme:white
 }
 a {
     color:inherit;
@@ -145,7 +145,7 @@ button {
     padding:0 18px;
     gap:14px
 }
-.button-dark {
+.button-white {
     background:var(--ink);
     color:var(--bg)
 }
@@ -579,15 +579,15 @@ h1 {
     color:var(--muted);
     background:color-mix(in srgb,var(--surface-2) 45%,transparent)
 }
-.section-dark {
-    background:var(--dark);
-    color:var(--dark-text)
+.section-white {
+    background:var(--white);
+    color:var(--white-text)
 }
-.section-dark
-.eyebrow,.section-dark .section-lead {
+.section-white
+.eyebrow,.section-white .section-lead {
     color:#b5b9ad
 }
-.section-dark
+.section-white
 .section-heading em {
     color:#d99a79
 }
@@ -665,7 +665,7 @@ h1 {
     padding:0;
     cursor:pointer
 }
-.section-dark.text-link {
+.section-white.text-link {
     margin-top:8px;
     color:#e7aa8b
 }
@@ -1100,8 +1100,8 @@ h1 {
     color:var(--muted)
 }
 .contact-section {
-    background:var(--dark);
-    color:var(--dark-text);
+    background:var(--white);
+    color:var(--white-text);
     padding:105px 0
 }
 .contact-inner {
@@ -1123,7 +1123,7 @@ h1 {
     margin:23px 0 28px
 }
 .button-light {
-    background:#f7f4ed;
+    background:#FFFFFF;
     color:#FFFFFF
 }
 .contact-details {
@@ -1144,7 +1144,7 @@ h1 {
 }
 .contact-block>a,.profile-links a {
     font:600 16px comic sans;
-    color:#f7f4ed
+    color:#FFFFFF
 }
 .profile-links {
     display:flex;
@@ -1173,7 +1173,7 @@ h1 {
     color:#e39a79
 }
 .footer {
-    background:var(--dark);
+    background:var(--white);
     color:#aeb4a8;
     border-top:1px solid #444a41;
     padding:23px 0
@@ -1184,7 +1184,7 @@ h1 {
     justify-content:space-between
 }
 .footer .brand {
-    color:#f7f4ed
+    color:#FFFFFF
 }
 .footer p,.footer>div>span {
     font-size:10px;
