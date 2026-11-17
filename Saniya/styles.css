@@ -1615,3 +1615,13 @@ h1 {
   color: #ffffff;
   border-color: #800000;
 }
+.hero {
+  min-height: auto;
+  padding-top: 0;
+  padding-bottom: 40px;
+  align-items: start;
+}
+.hero-left,
+.hero-right {
+  padding-top: 60px;
+}
