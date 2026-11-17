@@ -80,7 +80,7 @@ button {
     padding:0 max(32px,calc((100vw - 1160px)/2));
     background:color-mix(in srgb,var(--bg) 88%,transparent);
     backdrop-filter:blur(16px);
-    border-bottom:1px solid color-mix(in srgb,var(--line) 70%,transparent)
+    border-bottom:none
 }
 .brand {
     font-family:comic sans,sans-serif;
