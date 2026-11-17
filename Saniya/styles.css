@@ -165,14 +165,14 @@ button {
     display:none
 }
 .hero {
-    min-height:auto;
-    padding-top:30px;
-    padding-bottom:60px;
-    display:grid;
-    grid-template-columns:1.08fr .92fr;
-    align-items:center;
-    gap:60px;
-    position:relative
+  min-height: auto;
+  padding-top: 0;
+  padding-bottom: 40px;
+  align-items: start;
+}
+.hero-left,
+.hero-right {
+  padding-top: 60px;
 }
 .eyebrow {
     font-size:10px;
