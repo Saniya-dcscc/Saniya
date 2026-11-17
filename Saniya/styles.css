@@ -1599,3 +1599,19 @@ h1 {
   .hero { grid-template-columns: 1fr; }
   .hero-art { order: 0; }
 }
+/* Hero buttons: white normally, maroon on hover / tap */
+.hero-buttons .button {
+  background: #ffffff;
+  color: #24251f;
+  border: 1px solid #d9d9d9;
+  white-space: nowrap;
+  -webkit-tap-highlight-color: transparent;
+  transition: background .25s, color .25s, border-color .25s, transform .25s;
+}
+.hero-buttons .button:hover,
+.hero-buttons .button:active,
+.hero-buttons .button:focus-visible {
+  background: #800000;
+  color: #ffffff;
+  border-color: #800000;
+}
