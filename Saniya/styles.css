@@ -1,17 +1,16 @@
 /* ===== Colours & fonts: change them here ===== */
+/* ===== Palette: ONLY black, white and maroon (#800000) ===== */
 :root {
     --bg:#ffffff;
-    --surface:#e7e7e7;
-    --surface-2:#f3f3f3;
+    --surface:#ffffff;
+    --surface-2:#ffffff;
     --panel:#ffffff;
-    --panel-text:#24251f;
-    --ink:#24251f;
-    --muted:#686a61;
-    --line:#dcd8cd;
+    --panel-text:#000000;
+    --ink:#000000;
+    --muted:#000000;
+    --line:#800000;
     --accent:#800000;
-    --accent-soft:#ff8a9d;
-    --green:#647c62;
-    --shadow:0 18px 55px rgba(40,38,30,.08);
+    --shadow:none;
     --radius:22px;
     --font-head:'Comic Neue','Comic Sans MS','Comic Sans',sans-serif;
     color-scheme:light
@@ -34,18 +33,16 @@ body {
     transition:background .3s,color .3s
 }
 body.dark {
-    --bg:#181818;
-    --surface:#242424;
-    --surface-2:#1f1f1f;
-    --panel:#181818;
-    --panel-text:#f4f0e7;
-    --ink:#f4f0e7;
-    --muted:#b7b9ae;
-    --line:#3a3a3a;
-    --accent:#ff6b6b;
-    --accent-soft:#3a2326;
-    --green:#9db294;
-    --shadow:0 18px 55px rgba(0,0,0,.2);
+    --bg:#000000;
+    --surface:#000000;
+    --surface-2:#000000;
+    --panel:#000000;
+    --panel-text:#ffffff;
+    --ink:#ffffff;
+    --muted:#ffffff;
+    --line:#800000;
+    --accent:#800000;
+    --shadow:none;
     color-scheme:dark
 }
 a {
@@ -154,7 +151,7 @@ button {
 .hero {
     min-height:auto;
     padding-top:0;
-    padding-bottom:70px;
+    padding-bottom:50px;
     display:grid;
     grid-template-columns:1fr minmax(280px,400px) 1fr;
     align-items:start;
@@ -180,9 +177,8 @@ button {
     width:7px;
     height:7px;
     border-radius:50%;
-    background:var(--green);
-    margin-right:9px;
-    box-shadow:0 0 0 4px color-mix(in srgb,var(--green) 17%,transparent)
+    background:var(--accent);
+    margin-right:9px
 }
 h1,h2,h3,p {
     margin-top:0
@@ -219,20 +215,20 @@ h1 {
     gap:12px;
     margin-top:28px
 }
-/* Hero buttons: white normally, maroon on hover / tap */
+/* Hero buttons: white (black in dark mode) normally, maroon on hover / tap */
 .hero-buttons .button {
-    background:#ffffff;
-    color:#24251f;
-    border:1px solid #d9d9d9;
+    background:var(--bg);
+    color:var(--ink);
+    border:1px solid var(--accent);
     white-space:nowrap;
     -webkit-tap-highlight-color:transparent
 }
 .hero-buttons .button:hover,
 .hero-buttons .button:active,
 .hero-buttons .button:focus-visible {
-    background:#800000;
+    background:var(--accent);
     color:#ffffff;
-    border-color:#800000
+    border-color:var(--accent)
 }
 .hero-art {
     min-height:480px;
@@ -270,7 +266,7 @@ h1 {
     background:var(--accent)
 }
 .section {
-    padding:120px 0
+    padding:70px 0 0
 }
 .section-muted {
     background:var(--surface-2)
@@ -409,7 +405,7 @@ h1 {
     border:1px solid var(--line);
     border-radius:999px;
     color:var(--muted);
-    background:color-mix(in srgb,var(--surface-2) 45%,transparent)
+    background:transparent
 }
 .section-dark,
 .section-white {
@@ -450,7 +446,7 @@ h1 {
     background:var(--accent);
     margin:5px auto 0;
     z-index:1;
-    box-shadow:0 0 0 5px color-mix(in srgb,var(--accent) 14%,transparent)
+    box-shadow:none
 }
 .timeline-type {
     font-size:9px;
@@ -522,6 +518,7 @@ h1 {
     grid-template-columns:1fr 1fr
 }
 .project-visual {
+    border-bottom:1px solid var(--line);
     height:230px;
     position:relative;
     overflow:hidden;
@@ -529,6 +526,8 @@ h1 {
     place-items:center
 }
 .project-feature .project-visual {
+    border-bottom:0;
+    border-right:1px solid var(--line);
     height:100%;
     min-height:330px
 }
@@ -542,8 +541,8 @@ h1 {
     opacity:.7
 }
 .chrom-visual {
-    background:#e9e5dc;
-    color:#292b27
+    background:var(--bg);
+    color:var(--ink)
 }
 .chrom-word {
     font:800 clamp(50px,7vw,100px)/1 var(--font-head);
@@ -561,8 +560,8 @@ h1 {
     width:78px;
     height:50px;
     border-radius:50% 50% 48% 48%;
-    background:#faf8f1;
-    border:2px solid #292b27;
+    background:var(--bg);
+    border:2px solid var(--ink);
     transform:rotate(-15deg)
 }
 .chrom-eye i {
@@ -570,7 +569,7 @@ h1 {
     width:19px;
     height:25px;
     border-radius:50%;
-    background:#292b27;
+    background:var(--ink);
     left:40%;
     top:25%
 }
@@ -582,15 +581,15 @@ h1 {
     letter-spacing:.15em
 }
 .voting-visual {
-    background:#dfe6dc;
-    color:#2d3b31
+    background:var(--bg);
+    color:var(--ink)
 }
 .vote-mark {
     font:800 68px var(--font-head);
     letter-spacing:-.02em
 }
 .vote-mark span {
-    color:#b76548
+    color:var(--accent)
 }
 .vote-lines {
     position:absolute;
@@ -603,7 +602,7 @@ h1 {
     width:68px;
     height:5px;
     border-radius:4px;
-    background:#829783
+    background:var(--accent)
 }
 .vote-lines i:nth-child(2) {
     width:48px
@@ -612,27 +611,28 @@ h1 {
     width:58px
 }
 .news-visual {
-    background:#e8dfd2;
-    color:#34332f
+    background:var(--bg);
+    color:var(--ink)
 }
 .news-paper {
+    border:1px solid var(--ink);
     width:170px;
     height:165px;
-    background:#fbf8f0;
+    background:var(--bg);
     padding:15px;
-    box-shadow:8px 9px 0 rgba(52,51,47,.12);
+    box-shadow:8px 9px 0 var(--accent);
     transform:rotate(-4deg)
 }
 .news-paper b {
     font:800 10px var(--font-head);
     display:block;
-    border-bottom:1px solid #bbb4a8;
+    border-bottom:1px solid var(--ink);
     padding-bottom:7px
 }
 .news-paper i {
     display:block;
     height:3px;
-    background:#c9c2b6;
+    background:var(--ink);
     margin-top:8px;
     width:90%
 }
@@ -647,14 +647,15 @@ h1 {
     font:800 24px/.9 var(--font-head);
     letter-spacing:-.02em;
     margin-top:10px;
-    color:#b76548
+    color:var(--accent)
 }
 .quiz-visual {
-    background:#e7d9d0;
-    color:#302d2a
+    background:var(--bg);
+    color:var(--ink)
 }
 .quiz-window {
-    background:#fffaf1;
+    border:1px solid var(--ink);
+    background:var(--bg);
     border-radius:12px;
     padding:20px;
     width:190px;
@@ -664,7 +665,7 @@ h1 {
 .quiz-window small,.blog-sheet span {
     font-size:8px;
     letter-spacing:.12em;
-    color:#a15f49;
+    color:var(--accent);
     font-weight:700
 }
 .quiz-window b {
@@ -678,14 +679,14 @@ h1 {
 }
 .quiz-options i {
     font-style:normal;
-    border:1px solid #ded7cb;
+    border:1px solid var(--ink);
     border-radius:6px;
     padding:5px 11px;
     font-size:10px
 }
 .network-visual {
-    background:#dfe5e3;
-    color:#35423d
+    background:var(--bg);
+    color:var(--ink)
 }
 .network-nodes {
     width:190px;
@@ -697,7 +698,7 @@ h1 {
 .network-nodes:before,.network-nodes:after {
     content:"";
     position:absolute;
-    background:#8fa59a;
+    background:var(--accent);
     height:1px;
     width:150px;
     transform:rotate(30deg)
@@ -710,8 +711,8 @@ h1 {
     width:22px;
     height:22px;
     border-radius:50%;
-    background:#fff;
-    border:5px solid #718b7e;
+    background:var(--bg);
+    border:5px solid var(--accent);
     z-index:1
 }
 .network-nodes i:nth-child(1) {
@@ -732,8 +733,8 @@ h1 {
 }
 .network-nodes b {
     z-index:2;
-    background:#35423d;
-    color:#fff;
+    background:var(--ink);
+    color:var(--bg);
     border-radius:50%;
     width:68px;
     height:68px;
@@ -743,15 +744,16 @@ h1 {
     font:700 10px/1.2 var(--font-head)
 }
 .blog-visual {
-    background:#e9e3d7;
-    color:#34332f
+    background:var(--bg);
+    color:var(--ink)
 }
 .blog-sheet {
+    border:1px solid var(--ink);
     width:190px;
     height:160px;
-    background:#fffaf0;
+    background:var(--bg);
     padding:20px;
-    box-shadow:8px 8px 0 rgba(50,45,38,.1);
+    box-shadow:8px 8px 0 var(--accent);
     transform:rotate(-3deg)
 }
 .blog-sheet b {
@@ -763,7 +765,7 @@ h1 {
 .blog-sheet i {
     display:block;
     height:3px;
-    background:#d5cfc2;
+    background:var(--ink);
     width:80%;
     margin-top:7px
 }
@@ -771,19 +773,19 @@ h1 {
     width:58%
 }
 .automation-visual {
-    background:#e9dfd4;
-    color:#4a443b
+    background:var(--bg);
+    color:var(--ink)
 }
 .automation-loop {
     font:800 100px/1 var(--font-head);
-    color:#a9684e;
+    color:var(--accent);
     text-align:center
 }
 .automation-loop small {
     display:block;
     font:700 9px/1.5 var(--font-head);
     letter-spacing:.16em;
-    color:#4a443b
+    color:var(--ink)
 }
 .project-info {
     padding:24px
@@ -923,8 +925,7 @@ h1 {
 .contact-section {
     background:var(--panel);
     color:var(--panel-text);
-    border-top:1px solid var(--line);
-    padding:105px 0
+    padding:70px 0 50px
 }
 .contact-inner {
     display:grid;
@@ -1016,10 +1017,10 @@ h1 {
     padding:38px;
     background:var(--surface);
     color:var(--ink);
-    box-shadow:0 25px 90px rgba(0,0,0,.3)
+    box-shadow:none
 }
 .case-dialog::backdrop {
-    background:rgba(15,17,14,.62);
+    background:rgba(0,0,0,.75);
     backdrop-filter:blur(5px)
 }
 .dialog-close {
@@ -1134,7 +1135,7 @@ h1 {
     }
     .hero {
         padding-top:10px;
-        padding-bottom:90px;
+        padding-bottom:60px;
         gap:10px
     }
     .hero-left,
@@ -1158,7 +1159,7 @@ h1 {
         bottom:28px
     }
     .section {
-        padding:82px 0
+        padding:50px 0 0
     }
     .about-grid,.education-grid,.contact-inner {
         grid-template-columns:1fr;
@@ -1245,6 +1246,8 @@ h1 {
         display:block
     }
     .project-feature .project-visual {
+        border-right:0;
+        border-bottom:1px solid var(--line);
         min-height:220px;
         height:220px
     }
@@ -1279,7 +1282,7 @@ h1 {
         margin-top:30px
     }
     .contact-section {
-        padding:80px 0
+        padding:50px 0 40px
     }
     .contact-inner {
         gap:20px
@@ -1325,7 +1328,7 @@ h1 {
 .button-jelly {
     background:var(--accent);
     color:#fff;
-    box-shadow:0 10px 26px -2px rgba(128,0,0,.35)
+    box-shadow:none
 }
 .button-jelly:hover {
     transform:none;
