@@ -176,15 +176,15 @@ ul{margin:.6rem 0 0;padding-left:1.1rem}
 .edu-mark{width:10px;height:10px;border-radius:50%;background:var(--accent);margin-top:6px}
 
 /* contact + footer */
-.contact-section{background:var(--bg);color:var(--ink);padding:clamp(44px,6vw,72px) 0
+.contact-section{background:var(--bg);color:var(--ink);padding:clamp(44px,6vw,72px) 0}
 .contact-inner{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(30px,6vw,80px);align-items:start}
 .contact-copy p{color:var(--muted);max-width:46ch;margin-bottom:1.6rem}
 .contact-details{display:grid;gap:22px}
 .contact-block small{display:block;font:700 .68rem/1 var(--font-head);letter-spacing:.16em;color:var(--accent);margin-bottom:6px}
 .contact-block a{font-size:1.15rem;font-weight:600}
 .contact-block a:hover{color:var(--accent)}
-.resume-link{grid-column:1/-1;display:inline-flex;gap:8px;font-weight:700;color:var(--accent)}
-.footer{background:var(--bg);color:var(--muted);border-top:1px solid var(--line);padding:30px 0;font-size:.9rem}
+.resume-link{grid-column:2;justify-self:start;display:inline-flex;gap:8px;font-weight:700;color:var(--accent)}
+.footer{background:var(--bg);color:var(--muted);padding:30px 0;font-size:.9rem}
 .footer .section-wrap{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between}
 .footer p{margin:0}
 .footer .brand{color:var(--ink)}
@@ -209,7 +209,8 @@ ul{margin:.6rem 0 0;padding-left:1.1rem}
   .hero-art{order:-0}
   .mascot-interactive{height:min(420px,50svh)}
   .scroll-cue{display:none}
-  .about-grid,.education-grid,.contact-inner{grid-template-columns:1fr}
+  .about-grid,.education-grid,.contact-inner{grid-template-columns:1fr}  
+  .resume-link{grid-column:1}
   .role-grid{grid-template-columns:repeat(2,1fr)}
   .cert-grid{grid-template-columns:repeat(2,1fr)}
   .timeline-item{grid-template-columns:1fr;gap:6px}
