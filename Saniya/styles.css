@@ -11,7 +11,7 @@ body.dark{
 }
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:80px}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 var(--font-body);transition:background .3s,color .3s;-webkit-font-smoothing:antialiased}
+body{overflow-x:clip;margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 var(--font-body);transition:background .3s,color .3s;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}
 img,canvas{max-width:100%}
 h1,h2,h3,h4{font-family:var(--font-head);line-height:1.1;margin:0;letter-spacing:-.03em}
@@ -21,11 +21,11 @@ h3{font-size:1.25rem;font-weight:800}
 p{margin:0 0 1rem}
 ul{margin:.6rem 0 0;padding-left:1.1rem}
 .section-wrap{width:min(var(--wrap),calc(100% - 40px));margin:0 auto}
-.section{padding:clamp(70px,10vw,120px) 0}
+.section{padding:clamp(36px,5vw,56px) 0}
 .section-muted{background:var(--bg-muted)}
 .section-dark{background:var(--bg);color:var(--ink)}
 .eyebrow{display:flex;align-items:center;gap:8px;font:700 .72rem/1.3 var(--font-head);letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:1rem}
-.section-heading{margin-bottom:2.5rem}
+.section-heading{margin-bottom:1.8rem}
 .section-lead{color:var(--muted);max-width:56ch;margin-top:1rem;font-size:1.05rem}
 .section-heading-row{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:1.5rem}
 .section-heading-row .section-lead{margin:0}
@@ -176,7 +176,7 @@ ul{margin:.6rem 0 0;padding-left:1.1rem}
 .edu-mark{width:10px;height:10px;border-radius:50%;background:var(--accent);margin-top:6px}
 
 /* contact + footer */
-.contact-section{background:var(--bg);color:var(--ink);padding:clamp(70px,10vw,120px) 0}
+.contact-section{background:var(--bg);color:var(--ink);padding:clamp(44px,6vw,72px) 0
 .contact-inner{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(30px,6vw,80px);align-items:start}
 .contact-copy p{color:var(--muted);max-width:46ch;margin-bottom:1.6rem}
 .contact-details{display:grid;gap:22px}
