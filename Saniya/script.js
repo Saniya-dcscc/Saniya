@@ -183,7 +183,8 @@
       marker.setAttribute('transform', `translate(${pt.x} ${pt.y})`);
       MILESTONES.forEach((m, i) => {
         nodes[i].classList.toggle('on', p >= m);
-        labels[i].classList.toggle('on', p >= m);
+        labels[i].classList.toggle('on', p >= m);        
+        if (items[i]) items[i].classList.toggle('on', p >= m);
       });
     };
     const play = () => {
