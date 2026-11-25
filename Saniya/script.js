@@ -212,6 +212,8 @@
   const projectTrack = document.getElementById('projectTrack');
   if (projectStage && projectTrack && window.gsap && window.ScrollTrigger) {
     gsap.registerPlugin(ScrollTrigger);
+    window.addEventListener('load', () => ScrollTrigger.refresh());
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => ScrollTrigger.refresh());
     gsap.matchMedia().add('(min-width: 640px) and (prefers-reduced-motion: no-preference)', () => {
       const cards = gsap.utils.toArray('#projectTrack .project-card');
       const n = cards.length, GAP = 20, PAD = 16;
