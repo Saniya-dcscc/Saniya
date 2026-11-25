@@ -90,11 +90,14 @@ ul{margin:.6rem 0 0;padding-left:1.1rem}
 
 /* skills */
 .skill-groups{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-.skill-group{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px}
+.skill-group{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;transition:background .3s,border-color .3s,transform .3s,box-shadow .3s,color .3s}
+.skill-group:hover{background:var(--accent);border-color:var(--accent);color:#fff;transform:translateY(-4px);box-shadow:0 14px 30px rgba(128,0,0,.3)}
+.skill-group:hover .skill-group-head span{background:#fff}
+.skill-group:hover .chips span{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.4);color:#fff}
 .skill-group-head{display:flex;align-items:center;gap:10px;margin-bottom:1rem}
 .skill-group-head span{width:10px;height:10px;border-radius:50%;background:var(--accent)}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
-.chips span{border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:.85rem;font-weight:500;background:var(--bg)}
+.chips span{transition:background .3s,border-color .3s,color .3s;border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:.85rem;font-weight:500;background:var(--bg)}
 
 /* experience timeline */
 .section-dark .section-lead{color:var(--muted)}
