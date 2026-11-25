@@ -154,6 +154,58 @@
   window.addEventListener('scroll', updateProgress, { passive: true });
   updateProgress();
   document.getElementById('year').textContent = new Date().getFullYear();
+    // Experience roadmap
+  const rm = document.getElementById('roadmap');
+  if (rm) {
+    const DURATION_MS = 3500;                 // total drive time
+    const MILESTONES = [0.14, 0.40, 0.66, 0.90]; // node positions along the road
+    const road = document.getElementById('rmRoad');
+    const fill = document.getElementById('rmFill');
+    const marker = document.getElementById('rmMarker');
+    const nodes = [...rm.querySelectorAll('.rm-node')];
+    const labels = [...rm.querySelectorAll('.rm-label')];
+    const L = road.getTotalLength();
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let raf = 0;
+    fill.style.strokeDasharray = L;
+    MILESTONES.forEach((m, i) => {
+      const pt = road.getPointAtLength(L * m);
+      nodes[i].setAttribute('cx', pt.x);
+      nodes[i].setAttribute('cy', pt.y);
+      labels[i].style.left = (pt.x / 600 * 100) + '%';
+      labels[i].style.top = (pt.y / 340 * 100) + '%';
+    });
+    const ease = t => 1 - Math.pow(1 - t, 3); // gentle ease-out
+    const render = p => {
+      fill.style.strokeDashoffset = L * (1 - p);
+      const pt = road.getPointAtLength(L * p);
+      marker.setAttribute('transform', `translate(${pt.x} ${pt.y})`);
+      MILESTONES.forEach((m, i) => {
+        nodes[i].classList.toggle('on', p >= m);
+        labels[i].classList.toggle('on', p >= m);
+      });
+    };
+    const play = () => {
+      cancelAnimationFrame(raf);
+      if (reduce) { render(1); return; }
+      const start = performance.now();
+      render(0);
+      const tick = now => {
+        const t = Math.min((now - start) / DURATION_MS, 1);
+        render(ease(t));
+        if (t < 1) raf = requestAnimationFrame(tick);
+      };
+      raf = requestAnimationFrame(tick);
+    };
+    render(reduce ? 1 : 0);
+    document.getElementById('rmReplay').addEventListener('click', play);
+    if (!reduce) {
+      const rmObserver = new IntersectionObserver(entries => {
+        if (entries[0].isIntersecting) { play(); rmObserver.disconnect(); }
+      }, { threshold: 0.3 });
+      rmObserver.observe(rm);
+    }
+  }
 
   // Projects: start with one card, scroll to reveal all (tablet/desktop only)
   const projectStage = document.getElementById('projectStage');
