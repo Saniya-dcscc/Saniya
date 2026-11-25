@@ -210,7 +210,61 @@ body.dark .roadmap{--road:#1a1a1a}
 .edu-mark{width:10px;height:10px;border-radius:50%;background:var(--accent);margin-top:6px}
 
 /* contact + footer */
-.contact-section{background:var(--bg);color:var(--ink);padding:clamp(44px,6vw,72px) 0}
+.contact-section{
+  background:var(--bg);
+  color:var(--ink);
+  padding:clamp(44px,6vw,72px) 0;
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+}
+
+/* TextCursor background */
+.contact-cursor-layer{
+  position:absolute;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+  overflow:hidden;
+}
+
+.contact-cursor-item{
+  position:absolute;
+  left:0;
+  top:0;
+  color:var(--accent);
+  font-family:var(--font-head);
+  font-size:28px;
+  font-weight:800;
+  letter-spacing:-2px;
+  white-space:nowrap;
+  pointer-events:none;
+  user-select:none;
+  line-height:1;
+  will-change:transform,opacity;
+  animation:contactCursorFade .8s ease-out forwards;
+}
+
+@keyframes contactCursorFade{
+  0%{
+    opacity:0;
+    scale:.5;
+  }
+  15%{
+    opacity:.85;
+    scale:1.15;
+  }
+  100%{
+    opacity:0;
+    scale:.65;
+  }
+}
+
+/* Keep contact content above the cursor trail */
+.contact-inner{
+  position:relative;
+  z-index:1;
+}
 .contact-inner{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(30px,6vw,80px);align-items:start}
 .contact-copy p{color:var(--muted);max-width:46ch;margin-bottom:1.6rem}
 .contact-details{display:grid;gap:22px}
