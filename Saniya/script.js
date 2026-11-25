@@ -165,6 +165,38 @@
     const nodes = [...rm.querySelectorAll('.rm-node')];
     const labels = [...rm.querySelectorAll('.rm-label')];
     const items = [...document.querySelectorAll('.exp-item')];
+    // Decode effect for the experience text
+    const DEC = '.exp-date,.exp-type,h3,h4,li,p';
+    const CHARS = '01<>/\\{}[]#$%&*+=?ABCDEFGHJKMNPQRSTUVWXYZ';
+    items.forEach(it => it.querySelectorAll(DEC).forEach(e => { e.dataset.t = e.textContent; }));
+    const setItem = (item, on) => {
+      if (on === item.classList.contains('on')) return;
+      item.classList.toggle('on', on);
+      cancelAnimationFrame(item._raf);
+      const els = [...item.querySelectorAll(DEC)];
+      if (!on || reduce) {
+        els.forEach(e => { e.textContent = e.dataset.t; e.classList.remove('decoding'); });
+        return;
+      }
+      const t0 = performance.now();
+      const tick = now => {
+        let busy = false;
+        els.forEach((e, k) => {
+          const txt = e.dataset.t, dur = Math.min(900, 350 + txt.length * 8); // decode speed
+          const t = (now - t0 - k * 140) / dur;                               // 140 = delay between lines
+          if (t >= 1) {
+            if (e.textContent !== txt) { e.textContent = txt; e.classList.remove('decoding'); }
+            return;
+          }
+          busy = true;
+          e.classList.add('decoding');
+          const cut = Math.max(0, t) * txt.length;
+          e.textContent = [...txt].map((c, i) => (c === ' ' || i < cut) ? c : CHARS[Math.random() * CHARS.length | 0]).join('');
+        });
+        if (busy) item._raf = requestAnimationFrame(tick);
+      };
+      item._raf = requestAnimationFrame(tick);
+    };
     const L = road.getTotalLength();
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     let raf = 0;
