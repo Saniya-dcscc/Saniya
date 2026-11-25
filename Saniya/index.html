@@ -202,10 +202,42 @@
 
     <section class="section" id="education">
       <div class="section-wrap education-grid"><div class="section-heading reveal"><p class="eyebrow">MY JOURNEY</p><h2>Where it<br><em>started.</em></h2><p class="section-lead">A learning journey shaped by curiosity, exploration and a growing interest in technology.</p><div class="hobby-note"><span>📵</span><div><small>CANNOT FIND ME ONLINE?</small><strong>I am probably playing games,or watching movies </strong></div></div></div>
-        <div class="education-list">
-          <article class="education-item reveal"><span class="edu-year">2023 — 2026</span><div><small>BACHELOR'S DEGREE</small><h3>Loyola Academy Degree and PG College</h3><p>Bachelor of Computer Science · Cloud Computing</p></div><span class="edu-mark"></span></article>
-          <article class="education-item reveal"><span class="edu-year">2021 — 2023</span><div><small>JUNIOR COLLEGE</small><h3>Loyola Academy Junior College</h3><p>Mathematics, Economics and Commerce</p></div><span class="edu-mark"></span></article>
-          <article class="education-item reveal"><span class="edu-year">2021</span><div><small>SECONDARY EDUCATION</small><h3>St. Martin High School</h3><p>Secondary School Education</p></div><span class="edu-mark"></span></article>
+        <div class="education-graph-wrap reveal">
+          <div class="education-graph" id="educationGraph"
+               role="group"
+               aria-label="Education timeline shown as three ascending vertical bars">
+
+            <span class="education-hop-marker" aria-hidden="true"></span>
+
+            <article class="education-bar" style="--bar-height:48%;--bar-order:0">
+              <div class="education-bar-copy">
+                <small>2021</small>
+                <h3>St. Martin High School</h3>
+                <p>Secondary School Education</p>
+              </div>
+            </article>
+
+            <article class="education-bar" style="--bar-height:68%;--bar-order:1">
+              <div class="education-bar-copy">
+                <small>2021 — 2023</small>
+                <h3>Loyola Academy Junior College</h3>
+                <p>Mathematics, Economics and Commerce</p>
+              </div>
+            </article>
+
+            <article class="education-bar" style="--bar-height:88%;--bar-order:2">
+              <div class="education-bar-copy">
+                <small>2023 — 2026</small>
+                <h3>Loyola Academy Degree and PG College</h3>
+                <p>Bachelor of Computer Science · Cloud Computing</p>
+              </div>
+            </article>
+
+          </div>
+
+          <button class="education-replay" id="educationReplay" type="button">
+            Replay ↻
+          </button>
         </div>
       </div>
     </section>
