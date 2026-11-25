@@ -133,7 +133,7 @@ body.dark .roadmap{--road:#1a1a1a}
 @media(prefers-reduced-motion:reduce){.rm-card,.rm-node{transition:none}}
 
 /* ===== Projects (pinned stack → row) ===== */
-.projects-section{min-height:100svh;display:flex;align-items:center;overflow:hidden;padding:80px 0 40px}
+.projects-section{min-height:100svh;display:flex;align-items:center;overflow:hidden;padding:80px 0 40px;background:var(--bg);position:relative;z-index:2}
 .projects-inner{display:flex;flex-direction:column;gap:22px;width:min(var(--wrap),calc(100% - 40px))}
 .projects-inner .section-heading{margin-bottom:0}
 .projects-inner h2{font-size:clamp(1.8rem,4vw,3rem)}
