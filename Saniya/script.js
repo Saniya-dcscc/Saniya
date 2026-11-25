@@ -164,6 +164,7 @@
     const marker = document.getElementById('rmMarker');
     const nodes = [...rm.querySelectorAll('.rm-node')];
     const labels = [...rm.querySelectorAll('.rm-label')];
+    const items = [...document.querySelectorAll('.exp-item')];
     const L = road.getTotalLength();
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     let raf = 0;
