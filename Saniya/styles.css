@@ -2,7 +2,7 @@
 :root{
   --bg:#ffffff; --bg-muted:#ffffff; --ink:#1a1a1a; --muted:#6b6b6b; --line:#e6e0e0; --card:#ffffff;
   --accent:#800000; --accent-soft:rgba(128,0,0,.08); --hi:#fbd36b;
---ansari-gold:#C5A059;
+--ansari-gold:#FFC0CB;
   --font-head:'DM Sans',system-ui,sans-serif; --font-body:'DM Sans',system-ui,sans-serif;
   --radius:14px; --wrap:1180px;
 }
