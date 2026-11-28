@@ -49,9 +49,47 @@ ul{margin:.6rem 0 0;padding-left:1.1rem}
 .menu-toggle{display:none;width:40px;height:40px;border:1px solid var(--line);border-radius:10px;background:var(--card);cursor:pointer;position:relative}
 .menu-toggle i{position:absolute;left:11px;right:11px;height:2px;background:var(--ink)}
 .menu-toggle i:first-child{top:15px}.menu-toggle i:last-child{top:23px}
-.mobile-nav{display:none;position:fixed;top:68px;left:0;right:0;z-index:99;background:var(--bg);border-bottom:1px solid var(--line);padding:12px 20px 20px;flex-direction:column;gap:4px}
-.mobile-nav.open{display:flex}
-.mobile-nav a{padding:12px 4px;border-bottom:1px solid var(--line);font-weight:600}
+
+.mobile-nav {
+  display: flex;
+  position: fixed;
+  top: 68px;
+  left: 0;
+  right: 0;
+  z-index: 99;
+
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+  padding: 12px 20px 20px;
+
+  flex-direction: column;
+  gap: 4px;
+
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+
+  transform: translateY(-12px);
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    visibility 0.3s;
+}
+
+.mobile-nav.open {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+
+  transform: translateY(0);
+}
+
+.mobile-nav a {
+  padding: 12px 4px;
+  border-bottom: 1px solid var(--line);
+  font-weight: 600;
+}
 
 /* buttons */
 .button{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:999px;font-weight:700;border:1.5px solid transparent;transition:transform .2s,box-shadow .2s,background .2s}
