@@ -1,0 +1,38 @@
+/* hero */
+.hero{min-height:100svh;display:grid;grid-template-columns:1fr minmax(260px,420px) 1fr;align-items:center;gap:clamp(16px,3vw,48px);width:min(1320px,calc(100% - 40px));margin:0 auto;padding:78px 0 50px;position:relative}
+.status-dot{width:9px;height:9px;border-radius:50%;background:#35c27a;box-shadow:0 0 0 5px rgba(53,194,122,.2)}
+.hero h1{font-size:clamp(2.8rem,7vw,5.6rem);font-weight:800}
+.name-highlight{color:var(--accent)}
+.hero-art{display:flex;justify-content:center}
+.mascot-interactive{width:100%;height:min(560px,62svh);min-height:320px}
+#mascotCanvas{display:block;width:100%;height:100%}
+.hero-role{font-weight:700;color:var(--accent);margin-bottom:.8rem}
+.hero-role b{color:var(--muted);margin:0 4px}
+.hero-intro{color:var(--muted);font-size:1.1rem;max-width:40ch}
+.hero-buttons{display:flex;flex-wrap:wrap;gap:12px;margin-top:1.6rem}
+.scroll-cue{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:10px;font:700 .68rem/1 var(--font-head);letter-spacing:.18em;color:var(--muted)}
+.scroll-cue span{width:1px;height:28px;background:var(--accent)}
+
+/* about + roles */
+.about-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(30px,6vw,90px);align-items:start}
+.large-copy{font-size:1.3rem;line-height:1.5;font-weight:500}
+.about-content p{color:var(--muted)}
+.about-content .large-copy{color:var(--ink)}
+.role-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:3rem}
+.role-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px;position:relative;transition:transform .25s}
+.role-card:hover{transform:translateY(-4px)}
+.role-symbol{display:grid;place-items:center;width:44px;height:44px;border-radius:12px;background:var(--accent-soft);color:var(--accent);font-size:1.3rem;margin-bottom:1rem}
+.role-card h3{margin-bottom:.5rem;font-size:1.1rem}
+.role-card p{color:var(--muted);font-size:.9rem;margin:0}
+
+/* skills */
+.skill-groups{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.skill-group{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;transition:background .3s,border-color .3s,transform .3s,box-shadow .3s,color .3s}
+.skill-group:hover{background:var(--accent);border-color:var(--accent);color:#fff;transform:translateY(-4px);box-shadow:0 14px 30px rgba(128,0,0,.3)}
+.skill-group:hover .skill-group-head span{background:#fff}
+.skill-group:hover .chips span{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.4);color:#fff}
+.skill-group-head{display:flex;align-items:center;gap:10px;margin-bottom:1rem}
+.skill-group-head span{width:10px;height:10px;border-radius:50%;background:var(--accent)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{transition:background .3s,border-color .3s,color .3s;border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:.85rem;font-weight:500;background:var(--bg)}
+

@@ -1,0 +1,49 @@
+SANIYA PORTFOLIO — FILE GUIDE
+
+ROOT
+- index.html: Main portfolio page. Loads the CSS and JavaScript files listed below.
+- README.md: Project overview and local run instructions.
+- DEPLOYMENT.txt: Static hosting/deployment instructions.
+- FILE_GUIDE.txt: This file.
+- assets/: Existing resume PDF and mascot sprite sheet.
+- css/: Stylesheets separated by responsibility.
+- js/: JavaScript separated by feature/responsibility.
+- pages/: The eight standalone HTML pages present in the uploaded source ZIP.
+
+CSS FILES
+- 01-global-base-header-buttons.css: Theme variables, global/base styles, header/progress styles, and buttons.
+- 02-hero-about-skills.css: Hero, about, role cards, and skills styles.
+- 03-experience-roadmap.css: Experience list and roadmap base styles.
+- 04-projects.css: Project section and project card styles.
+- 05-certifications-carousel.css: Certification carousel base styles.
+- 06-responsive-tablet-mobile.css: Tablet/mobile and reduced-motion rules associated with experience and certifications.
+- 07-education-contact-effects-dialog.css: Education, contact cursor effects, footer, and case-study dialog styles.
+- 08-responsive-final.css: Final page-wide responsive and reduced-motion rules.
+- 09-pill-navigation.css: Animated pill navigation and mobile navigation styles.
+
+JAVASCRIPT FILES
+- 01-theme-navigation-scroll-reveal.js: Theme toggle, hero mascot interaction, and scroll reveal.
+- 02-certification-carousel.js: Certification carousel behaviour.
+- 03-education-animation.js: Education graph animation and replay.
+- 04-scroll-progress-footer-year.js: Scroll progress indicator and footer year.
+- 05-experience-roadmap-animation.js: Experience roadmap and text reveal animation.
+- 06-projects-scroll-animation.js: Project card scroll animation.
+- 07-contact-cursor-effect.js: Contact-section cursor trail effect.
+- 08-project-case-study-dialog.js: Project case-study dialog behaviour.
+- 09-pill-navigation.js: Desktop pill indicator and mobile navigation behaviour.
+
+PAGES PRESENT IN THE UPLOADED ZIP
+- pages/about.html
+- pages/automation-script.html
+- pages/blog-platform.html
+- pages/fake-news-detection.html
+- pages/home-lab.html
+- pages/online-quiz.html
+- pages/studio-chrom.html
+- pages/voting-system.html
+- pages/README-PAGES.txt
+
+NOTE
+The uploaded ZIP contained these eight page names. It did not contain budget-tracker.html,
+churn-insights.html, expense-splitter.html, featured-project.html, invoice-reminders.html,
+lead-funnel.html, or newsletter-hub.html, so no replacement pages were created or renamed.
