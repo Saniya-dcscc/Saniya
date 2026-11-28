@@ -52,5 +52,5 @@
   .projects-section{min-height:0}
 }
 .ansari-highlight {
-  color: var(--ansari-gold);
+  color: var(--ansari-electric-cyan) !important;
 }
